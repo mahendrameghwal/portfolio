@@ -1,0 +1,44 @@
+.w-100 {
+  width: 100%;
+}
+.fr {
+  float: right;
+}
+.tc {
+  text-align: center;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 95%;
+  margin: 0 auto;
+}
+.tl {
+  text-align: left;
+}
+.jcsa{
+  justify-content: space-around;
+}
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.tr {
+  text-align: right;
+}
+.btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: hsl(45, 100%, 72%);
+
+
+  &:hover{
+  background-color: hsl(45, 100%, 65%);
+
+  }
+}

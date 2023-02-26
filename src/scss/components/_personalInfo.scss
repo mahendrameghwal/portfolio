@@ -1,0 +1,71 @@
+.personal {
+@include BoxStyle();
+@include BorderGradient();
+border-radius: 16px;
+  width: 35%;
+  transition: transform 0.5s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 30px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .profile-img {
+    text-align: center;
+    img {
+      background: $bg-gradient-onyx;
+      border-radius: 5px;
+      margin-top: 10px;
+      
+      
+
+      height: 200px;
+  
+    }
+
+    h2 {
+      @include Fonts(1.3rem, 600);
+      line-height: 50px;
+    }
+
+    .prof-title {
+      background-color: $light-gray-70;
+      line-height: 25px;
+      @include width(70%, 0, auto);
+      color: $onyx;
+      @include Fonts(1rem, 600);
+    }
+  }
+  hr {
+    background-color: $light-gray-70;
+    height: 1px;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include margin(20px, 10px);
+
+    .title {
+      color: $light-gray-70;
+      border: none;
+    }
+    ion-icon {
+      color: $orange-yellow-crayola;
+      // border: 2px solid red;
+      padding: 5px 3px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s ease background;
+
+      &:hover {
+        box-shadow: 2px 3px 10px rgba(184, 182, 182, 0.653);
+        rotate: 2deg;
+      }
+    }
+    .social-links {
+      color: $white-2;
+    
+      @include Fonts(1rem , 300);
+    }
+  }
+}

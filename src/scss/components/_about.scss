@@ -1,0 +1,35 @@
+.ic {
+  padding: 30px 20px;
+
+  @include margin(70px, 0);
+  padding: 30px 60px;
+  word-break: normal;
+
+  .intro-peragraph {
+    padding: 0 20px;
+    text-align: left;
+    p {
+      line-height: 30px;
+      color: $light-gray;
+    }
+    .page-title {
+      color: $orange-yellow-crayola;
+    }
+    .what-i-do {
+      @include margin(50px, 0);
+    }
+  }
+  .page-title {
+    color: $orange-yellow-crayola;
+  }
+  .row {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+
+   .roll-title{
+    font-size: 1.2rem;
+   }
+  }
+}

@@ -1,0 +1,34 @@
+.btn-main-div {
+
+  .page-title{
+    color: $orange-yellow-crayola;
+
+  }
+  @include BoxStyle();
+  .btn-warpper {
+    @include BoxStyle();
+    @include BorderGradient();
+    border-bottom-left-radius: 15px;
+    list-style: none;
+    @include padding(10px, 20px);
+
+    .activeLinks {
+      text-decoration: none;
+
+      color: $light-gray;
+    }
+    .active {
+      color: $orange-yellow-crayola;
+    }
+
+
+    li {
+      text-decoration: none;
+      padding: 0 15px;
+      @include Fonts(1rem, 400);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  
+}

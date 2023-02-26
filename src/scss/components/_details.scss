@@ -1,0 +1,7 @@
+.details {
+  @include BoxStyle();
+  @include BorderGradient();
+  border-radius: 16px;
+  width: 100%;
+ 
+}

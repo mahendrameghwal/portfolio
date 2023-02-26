@@ -1,0 +1,10 @@
+.main {
+  @include width(85%, 20px, auto);
+  color: white;
+  .content-wrapper{
+    display: flex;
+    gap: 30px;
+//  border: 2px solid gold;
+ @include padding(10px , 10px);
+  }
+}

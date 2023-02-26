@@ -1,0 +1,24 @@
+.skill-div {
+
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    .col-1{
+        width: 50%;
+        ul {
+            list-style-type: none;
+            
+           li{
+            margin: 10px 0;
+            
+            @include BoxStyle();
+            @include BorderGradient();
+            border-radius: 3px ;
+            padding: 0 10px;
+            cursor: pointer;
+           }
+
+        }
+    }
+   
+}
