@@ -1,8 +1,6 @@
 .btn-main-div {
-
-  .page-title{
+  .page-title {
     color: $orange-yellow-crayola;
-
   }
   @include BoxStyle();
   .btn-warpper {
@@ -21,14 +19,61 @@
       color: $orange-yellow-crayola;
     }
 
-
     li {
       text-decoration: none;
+      text-transform: capitalize;
       padding: 0 15px;
       @include Fonts(1rem, 400);
       cursor: pointer;
       text-decoration: none;
     }
   }
-  
+}
+
+@media screen and (max-width: 1068px) {
+  .btn-main-div {
+    .btn-warpper {
+      border-bottom-left-radius: 3px;
+      @include padding(4px, 10px);
+
+      li {
+        text-decoration: none;
+        padding: 0 13px;
+        @include Fonts(0.98rem, 400);
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .btn-main-div {
+   
+    .btn-warpper {
+      position:fixed !important;
+      bottom: 0;
+     
+      width: 85.8%;
+      border-bottom-left-radius: 3px;
+      @include padding(2px, 0px);
+      justify-content: space-around;
+      li {
+        text-decoration: none;
+        padding: 0 10px;
+        @include Fonts(0.98rem, 400);
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  .btn-main-div {
+   
+    .btn-warpper {
+      position:fixed !important;
+      bottom: 0px;
+      width: 93.2%;
+    }
+  }
 }

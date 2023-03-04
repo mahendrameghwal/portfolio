@@ -1,40 +1,63 @@
-.contact-div{
-    margin: 20px 0;
+.contact-div {
+  margin: 20px 0;
 
-
-    .contact-wrapper{
-    input{
+  .contact-wrapper {
+    input {
       @include BoxStyle();
       @include BorderGradient();
       outline: none;
-    color: $light-gray;
-    font-size: 1rem;
-    margin: 15px 0;
-
+      color: $light-gray;
+      font-size: 1rem;
+      margin: 15px 0;
     }
-    .sec-row{
-        display: flex;
-        gap: 10px;
-        .emails{
-            @include padding(6px , 10px);   
-            width: 50%;
-            border-radius: 6px;
-            
-        }
-        .message{
-            @include padding(6px , 10px);   
-             width: 50%;
-            border-radius: 6px;
-
-        }
-    }
-    
-      
-    .names{
+    .sec-row {
+      display: flex;
+      gap: 10px;
+      .emails {
+        @include padding(6px, 10px);
+        width: 50%;
         border-radius: 6px;
+      }
+      .message {
+        @include padding(6px, 10px);
+        width: 50%;
+        border-radius: 6px;
+      }
+    }
+
+    .names {
+      border-radius: 6px;
+
+      width: 100%;
+      @include padding(6px, 10px);
+    }
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .contact-div {
+    .contact-wrapper {
+      input {
+        font-size: 0.9rem;
+      }
+      .sec-row {
+        
+        display: block;
+        .emails {
+          width: 100%;
+          border-radius: 5px;
+        }
+        .message {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .names {
+        border-radius: 5px;
 
         width: 100%;
-        @include padding(6px , 10px);   
+      }
     }
-    }
+  }
 }

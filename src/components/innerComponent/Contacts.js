@@ -1,18 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 const Contacts = () => {
+  const [usermessgae, setusermessgae] =useState("Send Message");
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_sc3jkxf",
-        "template_dhly5u2",
-        form.current,
-        "fJZQd8iRYM2EW1AHh"
-      )
+      .sendForm("service_sc3jkxf", "template_dhly5u2",form.current, "fJZQd8iRYM2EW1AHh" )
       .then(
         (result) => {
           console.log(result.text);
@@ -60,8 +56,8 @@ const Contacts = () => {
                 </div>
               </section>
 
-              <button type="submit" className="btn">
-                Send Message
+              <button onClick={()=>{setusermessgae("sent Successfully")}} type="submit" className="btn">
+                {usermessgae}
               </button>
             </div>
           </form>

@@ -1,24 +1,66 @@
 .skill-div {
-
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    .col-1{
-        width: 50%;
-        ul {
-            list-style-type: none;
-            
-           li{
-            margin: 10px 0;
-            
-            @include BoxStyle();
-            @include BorderGradient();
-            border-radius: 3px ;
-            padding: 0 10px;
-            cursor: pointer;
-           }
-
-        }
+  width: 100%;
+  display: inline-flex;
+  gap: 20px;
+  .col-1 {
+    h2 {
+      @include Fonts(1.2rem, 600);
     }
-   
+    width: 50%;
+    ul {
+      list-style-type: none;
+
+      li {
+        margin: 10px 0;
+
+        @include BoxStyle();
+        @include BorderGradient();
+        border-radius: 3px;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .skill-div {
+    width: 100%;
+    display: inline-flex;
+    .col-1 {
+      width: 100%;
+      h2 {
+        color: #ccc;
+        @include Fonts(1rem, 600);
+      }
+      ul {
+        li {
+          margin: 10px 0च
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .skill-div {
+    width: 100%;
+    gap: 0px;
+    .col-1 {
+     
+      h2 {
+        color: #ccc;
+        @include Fonts(0.9rem, 600);
+      }
+      ul {
+        li {
+          width: 80%;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
 }

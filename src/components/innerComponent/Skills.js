@@ -25,7 +25,7 @@ const Skills = () => {
           </div>
 
           <div className="col-1">
-            <h2 >Familiar With Technology</h2>
+            <h2 >Familiar Technology</h2>
 
             <div>
               <ul>

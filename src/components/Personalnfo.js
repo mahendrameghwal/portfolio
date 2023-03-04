@@ -18,7 +18,7 @@ const Personalnfo = () => {
       <br />
       <hr className="hr" />
       <div>
-        <section>
+        <section className="social-div">
           <section className="social">
             <ion-icon size="large" name="mail-outline"></ion-icon>
             <div>
@@ -69,13 +69,6 @@ const Personalnfo = () => {
             <div>
               <p className="title">Location</p>
               <p className="social-links">Sirohi (Rajasthan)</p>
-            </div>
-          </section>
-          <section className="social">
-            <ion-icon size="large" name="logo-instagram"></ion-icon>
-            <div>
-              <p className="title">Instagram</p>
-              <p className="social-links">rock_mahi_99</p>
             </div>
           </section>
         </section>

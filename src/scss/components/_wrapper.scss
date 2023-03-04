@@ -1,10 +1,34 @@
 .main {
   @include width(85%, 20px, auto);
   color: white;
-  .content-wrapper{
+  .content-wrapper {
     display: flex;
+
     gap: 30px;
-//  border: 2px solid gold;
- @include padding(10px , 10px);
+    @include padding(10px, 10px);
   }
+}
+
+@media screen and (max-width: 1068px) {
+  .main {
+    @include width(98%, 20px, auto);
+    .content-wrapper {
+      gap: 10px;
+      @include padding(5px, 5px);
+    }
+  }
+}
+@media screen and (max-width:768px){
+  .main {
+   
+    @include width(99%, 10px, auto);
+    color: white;
+    .content-wrapper {
+      display: block;
+      gap: 10px;
+      @include padding(10px, 10px);
+    }
+  }
+  
+
 }

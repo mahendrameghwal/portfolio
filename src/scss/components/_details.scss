@@ -3,5 +3,18 @@
   @include BorderGradient();
   border-radius: 16px;
   width: 100%;
- 
+}
+
+@media screen and (max-width: 768px) {
+  .details {
+    border-radius: 0px;
+    @include width(90%, 0, auto);
+    position: relative;
+  }
+}
+@media screen and (max-width: 450px) {
+  .details {
+    border-radius: 0px;
+    @include width(100%, 0, auto);
+  }
 }

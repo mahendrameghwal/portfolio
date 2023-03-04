@@ -17,9 +17,8 @@ const AboutMe = () => {
           <p>
             I have Understanding of HTML , CSS , Javascript as well as
             exprerience with frameworks , including React js and I am always
-             curious about learning with the latest web technology 
-             If you have any questions or
-            suggestions,reach out to me at{" "}
+            curious about learning with the latest web technology If you have
+            any questions or suggestions,reach out to me at{" "}
             <span className="page-title">solankirakesh895@gmail.com </span> and
             <span className="page-title">8078659728 </span>{" "}
           </p>
@@ -27,27 +26,28 @@ const AboutMe = () => {
 
         <div className="what-i-do">
           <h1 className="page-title">What I do </h1>
+          <br/>
           <div className="row">
             <section className="col-1">
               <figure>
-                <img alt="development" src={development} />{" "}
+                <img alt="development" src={development} />&nbsp; &nbsp; 
                 <span className="roll-title">Web development</span>
                 <figcaption>
                   <p>
                     languages and technologies you work with, such as HTML, CSS,
-                    JavaScript, and frameworks like React Js
+                    JavaScript, and frameworks like React Js .
                   </p>
                 </figcaption>
               </figure>
             </section>
-            <section className="col-1">
+            <section className="col-2">
               <figure>
-                <img alt="designer" src={design} />{" "}
-                <span className="roll-title">Web development</span>
+                <img alt="designer" src={design} /> &nbsp; &nbsp; 
+                <span className="roll-title">Web Design</span>
                 <figcaption>
                   <p>
-                    languages and technologies you work with, such as HTML, CSS,
-                    JavaScript, and frameworks like React Js
+                    creating beautiful, user-friendly websites using Figma and
+                    Adobe Photoshop
                   </p>
                 </figcaption>
               </figure>

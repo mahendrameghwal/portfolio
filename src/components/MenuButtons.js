@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 const MenuButtons = () => {
   
@@ -22,7 +22,7 @@ const MenuButtons = () => {
        <NavLink to ={"/contacts"} className="activeLinks"> <li>Contacts</li></NavLink>  
        
       </ul>
-      <p className="page-title">This Website Currently not Mobile Responsive</p>
+
     </div>
     </div>
   );
