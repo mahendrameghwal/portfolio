@@ -6,29 +6,22 @@ const AboutMe = () => {
     <div className="ic  ic-about">
       <div className="intro-peragraph">
         <div>
-          <p>
-            <br />
-            <h1 className="page-title">About Me </h1>
-            <br />
-            <h2>Welcome to my website! </h2>
-            <br />
-          </p>
+
+            <h2 className="page-title font-medium">About Me </h2>
+
 
           <p>
-            I have Understanding of HTML , CSS , Javascript as well as
-            exprerience with frameworks , including React js and I am always
-            curious about learning with the latest web technology If you have
-            any questions or suggestions,reach out to me at{" "}
-            <span className="page-title">solankirakesh895@gmail.com </span> and
-            <span className="page-title">8078659728 </span>{" "}
-          </p>
+            I have Understanding of Frontend and Backend development and Database management with Javascript as well as
+            exprerience with frameworks including React and Express.js and mongoDB <br /> 
+    
+                 </p>
         </div>
 
         <div className="what-i-do">
           <h1 className="page-title">What I do </h1>
           <br/>
           <div className="row">
-            <section className="col-1">
+            <section className="">
               <figure>
                 <img alt="development" src={development} />&nbsp; &nbsp; 
                 <span className="roll-title">Web development</span>

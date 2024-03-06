@@ -6,11 +6,7 @@ const Details = () => {
   return (
     <div className="details " >
     <MenuButtons/>
-    <Outlet/>
-  
-     
-  
-    
+    <Outlet/>  
     </div>
   );
 };

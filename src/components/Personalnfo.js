@@ -11,8 +11,8 @@ const Personalnfo = () => {
           src={mahendra}
         />
         <figcaption>
-          <h2>Mahendra Meghwal</h2>
-          <p className="prof-title">Frontend Developer</p>
+          <h2>Mahendra Kumar</h2>
+          <p className="prof-title">Full Stack developer</p>
         </figcaption>
       </figure>
       <br />
