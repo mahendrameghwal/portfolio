@@ -36,8 +36,8 @@ const Projects = () => {
       name: "Task Management System",
       image: project4,
       description: "TaskMaster is a full-stack web application built using the MERN (MongoDB, Express, React, Node.js) stack along with Tailwind CSS. It is designed to provide users with a personalized task management system",
-      demoLink: "https://example.com/global-guide-demo",
-      codeLink: "https://github.com/example/global-guide",
+      demoLink: "https://taskmaster-tech.vercel.app/",
+      codeLink: "https://github.com/mahendrameghwal/taskmaster-client",
     },
     
   

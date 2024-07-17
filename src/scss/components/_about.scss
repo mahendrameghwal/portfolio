@@ -16,6 +16,9 @@
     }
     .page-title {
       color: $orange-yellow-crayola;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+
     }
     .what-i-do {
       @include margin(50px, 0);
