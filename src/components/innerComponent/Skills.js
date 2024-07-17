@@ -9,35 +9,52 @@ const Skills = () => {
         <br />
         <div className="skill-div ">
           <div className="col-1">
-            <h2 className="">Working On Technology</h2>
-
+            <h2>Frontend</h2>
             <div>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>Bootstrap</li>
-                <li>REACT.JS</li>
-                <li>SASS</li>
-                <li>FIGMA</li>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>React.js</li>
+
+                  <li>SASS/SCSS</li>
+                  <li>npm</li>
+
+                  <li>Redux</li>
+
+                  <li>Axios</li>
+                  <li>Figma</li>
+
+                  <li>Adobe XD</li>
+                  <li>Responsive Web Design</li>
+
+                  <li>Bootstrap</li>
+                  <li>Tailwind CSS</li>
+                </ul>
               </ul>
             </div>
           </div>
 
           <div className="col-1">
-            <h2 >Familiar Technology</h2>
-
+            <h2>Backend Technology</h2>
             <div>
               <ul>
-                <li>Node JS</li>
-                <li>Express JS</li>
-                <li>Mongo DB</li>
-              
-               
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+
+                <li>RESTful APIs</li>
+                <li>Postman</li>
+
+                <li>JWT</li>
+                <li>Socket.io</li>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </div>

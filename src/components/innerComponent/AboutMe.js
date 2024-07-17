@@ -20,30 +20,48 @@ const AboutMe = () => {
         <div className="what-i-do">
           <h1 className="page-title">What I do </h1>
           <br/>
-          <div className="row">
-            <section className="">
-              <figure>
-                <img alt="development" src={development} />&nbsp; &nbsp; 
-                <span className="roll-title">Web development</span>
-                <figcaption>
-                  <p>
-                    languages and technologies you work with, such as HTML, CSS,
-                    JavaScript, and frameworks like React Js .
-                  </p>
-                </figcaption>
-              </figure>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%'
+          }}>
+            <section style={{
+              flex: 1,
+              padding: '2px',
+              marginRight: '20px'
+            }}>
+              <span style={{
+                fontWeight: 'bold',
+                fontSize: '1.2em',
+                display: 'block',
+                marginBottom: '10px'
+              }}>
+                Frontend Development
+              </span>
+              <figcaption>
+                <p style={{ margin: 0 }}>
+                  Languages and technologies you work with, such as HTML, CSS,
+                  JavaScript, and frameworks like React Js and Redux for state Management And many more.
+                </p>
+              </figcaption>
             </section>
-            <section className="col-2">
-              <figure>
-                <img alt="designer" src={design} /> &nbsp; &nbsp; 
-                <span className="roll-title">Web Design</span>
-                <figcaption>
-                  <p>
-                    creating beautiful, user-friendly websites using Figma and
-                    Adobe Photoshop
-                  </p>
-                </figcaption>
-              </figure>
+            <section style={{
+              flex: 1,
+              padding: '20px'
+            }}>
+              <span style={{
+                fontWeight: 'bold',
+                fontSize: '1.2em',
+                display: 'block',
+                marginBottom: '10px'
+              }}>
+                Backend Development
+              </span>
+              <figcaption>
+                <p style={{ margin: 0 }}>
+                  Working on Backend with Node.js and Framework Like Express and MongoDB and NO SQL Database
+                </p>
+              </figcaption>
             </section>
           </div>
         </div>
