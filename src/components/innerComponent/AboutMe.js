@@ -1,6 +1,5 @@
 import React from "react";
-import development from "../../icons/dev.svg";
-import design from "../../icons/design.svg";
+
 const AboutMe = () => {
   return (
     <div className="ic  ic-about">
@@ -8,11 +7,9 @@ const AboutMe = () => {
         <div>
 
             <h2 className="page-title font-medium">About Me </h2>
-
-
           <p>
-            I have Understanding of Frontend and Backend development and Database management with Javascript as well as
-            exprerience with frameworks including React and Express.js and mongoDB <br /> 
+            Exprienced with Frontend and Backend development and Database management with Javascript as well as
+            exprerience with various frameworks including like <span style={{color:'#ffdb70'}}>Next.JS</span>,  <span style={{color:'#ffdb70'}}>React</span> and <span style={{color:'#ffdb70'}}>Express</span> and <span style={{color:'#ffdb70'}}>MongoDB</span>  etc more..<br /> 
     
                  </p>
         </div>
@@ -39,9 +36,8 @@ const AboutMe = () => {
                 Frontend Development
               </span>
               <figcaption>
-                <p style={{ margin: 0 }}>
-                  Languages and technologies you work with, such as HTML, CSS,
-                  JavaScript, and frameworks like React Js and Redux for state Management And many more.
+                <p >
+                I work with HTML for structuring content, CSS for styling, and JavaScript for interactivity. I use React.js to build user interfaces and Redux for efficient state management, ensuring predictable state changes. This tech stack allows me to develop responsive and efficient web applications
                 </p>
               </figcaption>
             </section>

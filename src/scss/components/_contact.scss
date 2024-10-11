@@ -2,34 +2,35 @@
   margin: 20px 0;
 
   .contact-wrapper {
-    input {
+    input,
+    textarea {
       @include BoxStyle();
       @include BorderGradient();
       outline: none;
       color: $light-gray;
       font-size: 1rem;
       margin: 15px 0;
+      width: 100%;
+      border-radius: 6px;
+      @include padding(6px, 10px);
     }
+
     .sec-row {
-      display: flex;
-      gap: 10px;
+      // Removed display: flex
+
       .emails {
-        @include padding(6px, 10px);
-        width: 50%;
-        border-radius: 6px;
+        width: 100%;
       }
+
       .message {
-        @include padding(6px, 10px);
-        width: 50%;
-        border-radius: 6px;
+        width: 100%;
+        resize: vertical; // Allows vertical resizing
+        min-height: 100px; // Set a minimum height
       }
     }
 
     .names {
-      border-radius: 6px;
-
       width: 100%;
-      @include padding(6px, 10px);
     }
   }
 }
@@ -37,27 +38,43 @@
 @media screen and (max-width: 1068px) {
   .contact-div {
     .contact-wrapper {
-      input {
+      input,
+      textarea {
         font-size: 0.9rem;
+        border-radius: 5px;
       }
+
       .sec-row {
-        
         display: block;
-        .emails {
-          width: 100%;
-          border-radius: 5px;
-        }
+
+        .emails,
         .message {
           width: 100%;
           border-radius: 5px;
+        }
+
+        .message {
+          min-height: 80px; // Slightly smaller minimum height for mobile
         }
       }
 
       .names {
         border-radius: 5px;
-
         width: 100%;
       }
     }
   }
+}
+
+// Add these new styles for error and success messages
+.error-message {
+  color: #ff0000;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: #00ff00;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
