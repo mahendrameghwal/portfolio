@@ -144,27 +144,48 @@ const Projects = () => {
         </div>
       </div>
 
-<Modal open={showModal} onClose={closeModal} center>
-{selectedProject && (
-   <Fragment>
-    <h2>{selectedProject.name}</h2>
-    <img className="modal-img" src={selectedProject.image} alt={selectedProject.name} />
-    <p>Description: {selectedProject.description}</p>
-   <div style={{display:"flex",margin:"0 5px", gap:"0 10px"}}>
-   <button  onclick="window.location.href='http://google.com';" title="Save" class="save-button">
-   <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-   <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">Live demo</a>
- </button>
- <button  onclick="window.location.href='http://google.com';" title="Save" class="save-button">
- <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-   <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">See code</a>
- </button>
-   </div>
-    </Fragment>
-)}
-</Modal>
-
-     
+      <Modal open={showModal} onClose={closeModal} center>
+        {selectedProject && (
+          <Fragment>
+            <h2>{selectedProject.name}</h2>
+            <img
+              className="modal-img"
+              src={selectedProject.image}
+              alt={selectedProject.name}
+            />
+            <p>Description: {selectedProject.description}</p>
+            <div style={{ display: "flex", margin: "0 5px", gap: "0 20px" }}>
+              <button
+                title="see live"
+                class="save-button"
+              >
+               <MdLiveTv/>
+                <a
+                  href={selectedProject.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live demo
+                </a>
+              </button>
+              <button
+          
+                title="Save"
+                class="save-button"
+              >
+              <IoCode/>
+                <a
+                  href={selectedProject.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See code
+                </a>
+              </button>
+            </div>
+          </Fragment>
+        )}
+      </Modal>
     </div>
   );
 };
