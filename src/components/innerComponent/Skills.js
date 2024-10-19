@@ -18,6 +18,8 @@ const Skills = () => {
                   <li>JavaScript</li>
                   <li>TypeScript</li>
                   <li>React.js</li>
+                  <li>NEXT.js</li>
+
 
                   <li>SASS/SCSS</li>
                   <li>npm</li>
@@ -26,9 +28,6 @@ const Skills = () => {
 
                   <li>Axios</li>
                   <li>Figma</li>
-
-                  <li>Adobe XD</li>
-                  <li>Responsive Web Design</li>
 
                   <li>Bootstrap</li>
                   <li>Tailwind CSS</li>
@@ -50,7 +49,6 @@ const Skills = () => {
 
                 <li>JWT</li>
                 <li>Socket.io</li>
-                <li>PostgreSQL</li>
                 <li>MySQL</li>
               </ul>
             </div>

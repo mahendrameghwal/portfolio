@@ -47,7 +47,7 @@ const Personalnfo = () => {
             <ion-icon size="large" name="logo-github"></ion-icon>
             <div>
               <p className="title">Github</p>
-              <Link to={"https://github.com/mahendrameghwal"}><p className="social-links">mahendrameghwal</p></Link>
+              <Link to={"https://github.com/mahendrameghwal"}><p className="social-links">mahendrakumar</p></Link>
               
             </div>
           </section>
@@ -57,7 +57,7 @@ const Personalnfo = () => {
             <div>
               <p className="title">Codepen</p>
               <Link to={"https://codepen.io/Mahii-"}>
-              <p className="social-links">mahendrameghwal</p>
+              <p className="social-links">mahendrakumar</p>
               
               </Link>
             </div>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutMe from "./components/innerComponent/AboutMe";
 import Contacts from "./components/innerComponent/Contacts";
 import Projects from "./components/innerComponent/Projects";

@@ -5,30 +5,29 @@
     flex-wrap: wrap;
     width: 100%;
     height: 80vh;
-overflow-y: scroll;
+    overflow-y: scroll;
     justify-content: space-around;
     gap: 20px !important;
-    &::-webkit-scrollbar{width:8px;}
-  &::-webkit-scrollbar-thumb{
-      background:  hsl(45, 100%, 72%);
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: hsl(45, 100%, 72%);
       border-radius: 5px;
       box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
       height: 10px;
       scroll-behavior: smooth;
-      
-      
-  }
+    }
     .project-img-div {
-      
-        .project-name{
-             color: $orange-yellow-crayola;       
-        }
+      .project-name {
+        color: $orange-yellow-crayola;
+      }
       .project-img {
-        height: 150px;
+        width: 280px; /* Set a fixed width for all images */
+        height: auto; /* Allow height to adjust proportionally */
+        object-fit: contain;
       }
       .project-btn-div {
-    
-
         display: flex;
         margin-top: 5px;
         gap: 20px !important;
@@ -37,44 +36,42 @@ overflow-y: scroll;
   }
 }
 
-
-@media screen and (max-width:1068px) {
-    .main-project-div{
+@media screen and (max-width: 1068px) {
+  .main-project-div {
+    .project-wrapper {
+      display: flex;
+      height: 300px;
+      overflow-y: scroll;
       
-      .project-wrapper{
-            display: flex;
-          height: 300px;
-            overflow-y: scroll;
-           
-            justify-content: space-around;
-            gap: 20px !important;
-     
 
+      justify-content: space-around;
+      gap: 20px !important;
 
-            &::-webkit-scrollbar{
-                width:7px;
-                background-color:#090101;
-                border: 1px solid rgb(63, 63, 63);
-            }
-            &::-webkit-scrollbar-thumb{
-                background:  hsl(45, 100%, 72%);
-                border-radius: 5px;
-                box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
-                height: 10px;
-                scroll-behavior: smooth;
-                
-            }
-            .project-img-div{
-                .project-img{
-                    height: 120px;
-                }
-                .project-btn-div{
-                    display: flex;
-                    margin-top: 5px;
-                    gap: 20px !important;
-                }
-            }
+      &::-webkit-scrollbar {
+        width: 7px;
+        background-color: #090101;
+        border: 1px solid rgb(63, 63, 63);
+      }
+      &::-webkit-scrollbar-thumb {
+        background: hsl(45, 100%, 72%);
+        border-radius: 5px;
+        box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+        height: 10px;
+        scroll-behavior: smooth;
+      }
+      .project-img-div {
+        .project-img {
+          width: 250px; /* Set a fixed width for all images */
+          height: auto; /* Allow height to adjust proportionally */
+          object-fit: contain;
+          
         }
-    
+        .project-btn-div {
+          display: flex;
+          margin-top: 5px;
+          gap: 20px !important;
+        }
+      }
     }
+  }
 }
