@@ -1,212 +1,143 @@
 .personal {
   @include BoxStyle();
-  @include BorderGradient();
-  border-radius: 16px;
-  width: 35%;
-  transition: transform 0.5s;
+  flex: 0 0 320px;
+  padding: 30px;
+  @include transition(transform);
+  position: relative;
 
-  &:hover {
-    box-shadow: 0px 10px 30px 2px rgba(0, 0, 0, 0.25);
+  .resume-btn-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include flex-center();
+    transform: translateY(-50%);
+    z-index: 5;
+
+    .resume-download-btn {
+      background: $onyx;
+      border: 1px solid $jet;
+      padding: 8px 20px;
+      border-radius: 12px;
+      @include flex-center(row, 10px);
+      color: $orange-yellow-crayola;
+      @include Fonts(0.85rem, 600);
+      @include transition();
+      box-shadow: $shadow-2;
+      cursor: pointer;
+
+      &:hover {
+        background: $jet;
+        transform: scale(1.05);
+        color: $white-1;
+      }
+    }
   }
 
   .profile-img {
+    @include flex-center(column, 15px);
     text-align: center;
+    margin-top: 15px; // Extra space for resume button
+    margin-bottom: 25px;
+
     img {
       background: $bg-gradient-onyx;
-      border-radius: 5px;
-      margin-top: 10px;
-      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.653);
-
-      height: 200px;
+      border-radius: 20px;
+      box-shadow: $shadow-1;
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border: 1px solid $jet;
     }
 
     h2 {
-      @include Fonts(1.3rem, 600);
-      line-height: 50px;
+      @include Fonts(1.5rem, 600);
+      color: $white-1;
+      margin-top: 10px;
     }
 
     .prof-title {
-      background-color: $light-gray-70;
-      line-height: 25px;
-      @include width(70%, 0, auto);
-      color: $onyx;
-      @include Fonts(1rem, 600);
+      background-color: $jet;
+      color: $white-1;
+      padding: 6px 18px;
+      border-radius: 10px;
+      @include Fonts(0.85rem, 500);
+      display: inline-block;
     }
   }
+
   hr {
-    background-color: $light-gray-70;
+    border: 0;
     height: 1px;
+    background: $jet;
+    margin: 25px 0;
   }
-  .social {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    @include margin(20px, 10px);
 
-    .title {
-      color: $light-gray-70;
-      border: none;
-    }
-    ion-icon {
-      color: $orange-yellow-crayola;
-      // border: 2px solid red;
-      padding: 5px 3px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.5s ease background;
-
-      &:hover {
-        box-shadow: 2px 3px 10px rgba(184, 182, 182, 0.653);
-        rotate: 2deg;
-      }
-    }
-    .social-links {
-      color: $white-2;
-
-      @include Fonts(1rem, 300);
-    }
-  }
-}
-
-@media screen and (max-width: 1068px) {
-  .personal {
-    border-radius: 11px;
-    width: 40%;
-    transition: 0.5s transform !important;
-
-    .profile-img {
-      text-align: center;
-      img {
-        background: $bg-gradient-onyx;
-        border-radius: 8px;
-        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.653);
-        margin-top: 2px;
-        height: 160px;
-      }
-
-      h2 {
-        @include Fonts(1.1rem, 500);
-        line-height: 30px;
-      }
-
-      .prof-title {
-        background-color: $light-gray-70;
-        line-height: 22px;
-        @include width(60%, 0, auto);
-        color: $onyx;
-        @include Fonts(1rem, 500);
-      }
-    }
-    hr {
-      background-color: $light-gray-70;
-      height: 1px;
-    }
-    .social-div {
-      display: block;
-      width: 90%;
-      margin: 0 auto;
-      .social {
-        align-items: center;
-        gap: 5px;
-        @include margin(20px, 10px);
-
-        .title {
-          color: $light-gray-70;
-          font-size: 0.9rem;
-        }
-        ion-icon {
-          color: $orange-yellow-crayola;
-          // border: 2px solid red;
-          padding: 3px 2px;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: 0.5s ease background;
-          
-          &:hover {
-            user-select: none;
-            box-shadow: 2px 3px 10px rgba(184, 182, 182, 0.653);
-            rotate: 1deg;
-          }
-        }
-        .social-links {
-          @include Fonts(0.9rem, 300);
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .personal {
-    border-radius: 4px;
-    @include width(90%, 0, auto);
-    .profile-img {
-      text-align: center;
-      img {
-        height: 150px;
-      }
-
-      h2 {
-        @include Fonts(1rem, 500);
-        line-height: 30px;
-      }
-
-      .prof-title {
-        background-color: $light-gray-70;
-        @include width(30%, 0, auto);
-        @include Fonts(1rem, 400);
-      }
-    }
-    .social-div {
-      display: block;
-      width: 100%;
-      margin: 13px auto;
-      .social {
-        align-items: center;
-        gap: 5px;
-        @include margin(20px, 10px);
-
-        .title {
-          color: $light-gray-70;
-          font-size: 0.9rem;
-        }
-        ion-icon {
-          border-radius: 4px;
-          cursor: pointer;
-          transition: 0.5s ease;
-        }
-        .social-links {
-          @include Fonts(0.8rem, 300);
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .personal {
-    border-radius: 4px;
-    @include width(100%, 0, auto);
-    .profile-img {
-      img {
-        height: 180px;
-      }
-
-      h2 {
-        @include Fonts(1rem, 500);
-      }
-
-      .prof-title {
-        @include width(50%, 0, auto);
-      
-      }
-    }
+  .social-div {
+    @include flex-column(25px);
 
     .social {
-      gap: 10px;
-      .social-links {
-        @include Fonts(0.9rem, 300);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .title {
+        color: $light-gray-70;
+        @include Fonts(0.8rem, 500);
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
       }
+
+      .icon-box {
+        @include flex-center();
+        background: $onyx;
+        color: $orange-yellow-crayola;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        box-shadow: $shadow-1;
+        @include transition();
+        flex-shrink: 0;
+        border: 1px solid $jet;
+
+        &:hover {
+          background: $jet;
+          transform: translateY(-3px);
+          color: $white-1;
+        }
+      }
+
+      .social-links {
+        color: $white-1;
+        @include Fonts(0.95rem, 400);
+        word-break: break-all;
+      }
+    }
+  }
+
+  @include tablet {
+    flex: 0 0 280px;
+    padding: 20px;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+    flex: none;
+    width: 100%;
+    position: static;
+
+    .resume-btn-container {
+      top: 15px;
+      transform: none;
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .social-div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
   }
 }

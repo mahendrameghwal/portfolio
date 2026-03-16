@@ -21,33 +21,36 @@ const Projects = () => {
     {
       name: "JobConnect",
       image: project0,
+      tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "PayPal"],
       description:
-        "It is  a full-stack JOb MarketPalace Where Users can create accounts as candidates or organizations, each with detailed profiles. Organizations post jobs, while candidates search and apply for jobs. Direct messaging is enabled for communication. Both can update profiles and candidates can customize their CVs. PayPal integration allows seamless payments and subscription management.",
+        "A comprehensive full-stack Job Marketplace. Features include multi-role profiles (Candidates/Organizations), role-specific job searching, direct messaging, customized CV builders, and secure subscription management via PayPal integration.",
       demoLink: "https://jobconnect1.netlify.app/",
       codeLink: "https://github.com/mahendrameghwal/jobconnect",
     },
-
     {
-      name: "Blog management",
+      name: "Blog Management",
       image: project1,
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
       description:
-        "It is  a full-stack blog platform with user authentication, account creation, and commenting features and Integrated admin content management, secure user roles, and a robust back-end for data management and API integrations",
+        "Full-stack blog platform featuring secure user authentication, role-based access for admins and users, and a robust backend for managing posts and comments effectively.",
       demoLink: "https://blog-zs58.onrender.com",
       codeLink: "https://github.com/mahendrameghwal/blogs",
     },
-
     {
-      name: "Netflix FullStack",
+      name: "Netflix Clone",
       image: project2,
+      tech: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
       description:
-        "Netflix is a full-stack web application built using React, Node.js, Express.js, and MongoDB. It offers a seamless movie browsing experience with a user-friendly interface",
+        "A feature-rich Netflix clone that provides a seamless movie browsing experience. Includes user authentication and a responsive interface powered by the MERN stack.",
       demoLink: "https://netflix-client-seven.vercel.app",
       codeLink: "https://github.com/mahendrameghwal/netflix-client",
     },
     {
       name: "Global Guide",
       image: project3,
-      description: "Global Guide project description",
+      tech: ["JavaScript", "REST API", "HTML", "SCSS"],
+      description:
+        "Interactive explorer for global country data. Features theme switching, region filtering, and detailed statistics for every nation, powered by a third-party REST API.",
       demoLink:
         "https://mahendrameghwal.github.io/REST-Countries-API-with-color-theme-switcher",
       codeLink:
@@ -56,17 +59,18 @@ const Projects = () => {
     {
       name: "Weather App",
       image: project4,
+      tech: ["React", "Tailwind CSS", "Recharts", "Context API"],
       description:
-        "it offers real-time weather data from weatherapi.com. Custom hooks and the Context API ensure efficient state management, while Recharts to stunning data visualizations. Tailwind CSS with styling with responsive design. Explore the code on GitHub",
+        "Real-time weather tracking application with stunning data visualizations. Uses custom hooks for state management and provides detailed forecasts via weatherapi.com integration.",
       demoLink: "https://weather-app-codeclause.vercel.app",
       codeLink: "https://github.com/mahendrameghwal/PRODIGY_WD_01",
     },
-
     {
-      name: "Task Management System",
+      name: "TaskMaster",
       image: project5,
+      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
       description:
-        "TaskMaster is a full-stack web application built using the MERN (MongoDB, Express, React, Node.js) stack along with Tailwind CSS. It is designed to provide users with a personalized task management system",
+        "A personalized task management system designed to boost productivity. Includes task categorization, priority levels, and a clean, modern user interface.",
       demoLink: "https://taskmaster-tech.vercel.app/",
       codeLink: "https://github.com/mahendrameghwal/taskmaster-client",
     },
@@ -89,101 +93,94 @@ const Projects = () => {
           {projects.map((project, index) => (
             <figure
               key={index}
-              className="project-img-div"
+              className="project-card"
               onClick={() => openModal(project)}
             >
-              <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                >
+              <div className="project-img-box">
+                <div className="view-overlay">
                   <svg
-                    width="64px"
-                    height="64px"
-                    viewBox="-4.8 -4.8 57.60 57.60"
+                    width="48px"
+                    height="48px"
+                    viewBox="0 0 48 48"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#f5c724"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke="#CCCCCC"
-                      stroke-width="0.096"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <path d="M0 0h48v48H0z" fill="none"></path>{" "}
-                      <g id="Shopicon">
-                        {" "}
-                        <circle cx="24" cy="24" r="4"></circle>{" "}
-                        <path d="M24,38c12,0,20-14,20-14s-8-14-20-14S4,24,4,24S12,38,24,38z M24,16c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8 S19.582,16,24,16z"></path>{" "}
-                      </g>{" "}
+                    <path d="M0 0h48v48H0z" fill="none"></path>
+                    <g id="Shopicon">
+                      <circle cx="24" cy="24" r="4"></circle>
+                      <path d="M24,38c12,0,20-14,20-14s-8-14-20-14S4,24,4,24S12,38,24,38z M24,16c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8 S19.582,16,24,16z"></path>
                     </g>
                   </svg>
                 </div>
                 <img
-                  style={{
-                    boxShadow:
-                      "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;",cursor:"pointer !important"
-                  }}
                   className="project-img"
-                  
                   src={project.image}
                   alt={project.name}
                 />
               </div>
-              <figcaption className="project-name ">{project.name}</figcaption>
+              <figcaption className="project-info">
+                <h3 className="project-name">{project.name}</h3>
+                <div className="tech-stack">
+                  {project.tech.slice(0, 3).map((t, i) => (
+                    <span key={i} className="tech-chip">{t}</span>
+                  ))}
+                  {project.tech.length > 3 && <span className="tech-chip">+{project.tech.length - 3}</span>}
+                </div>
+              </figcaption>
             </figure>
           ))}
         </div>
       </div>
 
-      <Modal open={showModal} onClose={closeModal} center>
+      <Modal open={showModal} onClose={closeModal} center classNames={{ modal: 'custom-modal' }}>
         {selectedProject && (
-          <Fragment>
-            <h2>{selectedProject.name}</h2>
-            <img
-              className="modal-img"
-              src={selectedProject.image}
-              alt={selectedProject.name}
-            />
-            <p>Description: {selectedProject.description}</p>
-            <div style={{ display: "flex", margin: "0 5px", gap: "0 20px" }}>
-              <button
-                title="see live"
-                class="save-button"
-              >
-               <MdLiveTv/>
+          <div className="modal-content">
+            <h2 className="modal-title">{selectedProject.name}</h2>
+            <div className="modal-img-container">
+              <img
+                className="modal-img"
+                src={selectedProject.image}
+                alt={selectedProject.name}
+              />
+            </div>
+
+            <div className="modal-details">
+              <div className="modal-section">
+                <h3>About the Project</h3>
+                <p className="modal-desc">{selectedProject.description}</p>
+              </div>
+
+              <div className="modal-section">
+                <h3>Technologies Used</h3>
+                <div className="modal-tech-stack">
+                  {selectedProject.tech.map((t, i) => (
+                    <span key={i} className="tech-chip">{t}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="modal-actions">
                 <a
                   href={selectedProject.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="action-btn live-btn"
                 >
-                  Live demo
+                  <MdLiveTv />
+                  <span>Live Demo</span>
                 </a>
-              </button>
-              <button
-          
-                title="Save"
-                class="save-button"
-              >
-              <IoCode/>
                 <a
                   href={selectedProject.codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="action-btn code-btn"
                 >
-                  See code
+                  <IoCode />
+                  <span>Source Code</span>
                 </a>
-              </button>
+              </div>
             </div>
-          </Fragment>
+          </div>
         )}
       </Modal>
     </div>

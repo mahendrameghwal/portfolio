@@ -1,15 +1,15 @@
 import React from 'react';
-import Personalnfo from './Personalnfo';
+import PersonalInfo from './PersonalInfo';
 import Details from './Details';
 const Wrapper = () => {
   return (
     <div className='main'>
-  <section className='content-wrapper'>
-  
-  
-  <Personalnfo  />
-  <Details/>
-  </section>
+      <section className='content-wrapper'>
+
+
+        <PersonalInfo />
+        <Details />
+      </section>
     </div>
   )
 }

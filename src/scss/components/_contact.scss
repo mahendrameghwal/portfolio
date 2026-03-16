@@ -2,17 +2,17 @@
   margin: 20px 0;
 
   .contact-wrapper {
+
     input,
     textarea {
       @include BoxStyle();
-      @include BorderGradient();
       outline: none;
       color: $light-gray;
       font-size: 1rem;
       margin: 15px 0;
       width: 100%;
-      border-radius: 6px;
-      @include padding(6px, 10px);
+      border-radius: 8px;
+      padding: 12px 15px;
     }
 
     .sec-row {
@@ -38,6 +38,7 @@
 @media screen and (max-width: 1068px) {
   .contact-div {
     .contact-wrapper {
+
       input,
       textarea {
         font-size: 0.9rem;

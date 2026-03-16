@@ -1,23 +1,42 @@
-@import "./scss/utils/global"  ,"./scss/utils/mixin" , "./scss/utils/variable"  ;
-@import"./scss/components/project", "./scss/components/contact","./scss/components/skills" ,"./scss/components/wrapper" , "./scss/components/personalInfo" , "./scss/components/details"  ,"./scss/components/menubuttons", "./scss/components/about";
+@import "./scss/utils/global", "./scss/utils/mixin", "./scss/utils/variable";
+@import"./scss/components/project", "./scss/components/contact", "./scss/components/skills", "./scss/components/wrapper", "./scss/components/personalInfo", "./scss/components/details", "./scss/components/menubuttons", "./scss/components/about";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    body{
-        font-family: 'Poppins', sans-serif;
-     font-size: 15px;
-    background-color:  $smoky-black;
 
-       .react-responsive-modal-modal{
-    background-color:  $smoky-black;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     color: white !important;
-     border-radius: 5px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-     .save-button {
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: $smoky-black;
+    overflow-x: hidden;
+
+    a {
+      text-decoration: none;
+    }
+
+    .project-img-div {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        .project-img {
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px !important;
+        }
+      }
+    }
+
+    .react-responsive-modal-modal {
+      background-color: $smoky-black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      color: white !important;
+      border-radius: 5px;
+
+      .save-button {
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -27,45 +46,46 @@
         border-radius: 4px;
         transition: background-color 0.3s, border-color 0.3s;
         margin: 5px 0;
-        
+
       }
-  
+
       .save-button:hover {
         background-color: #009000;
         border-color: #009000;
       }
+
       .save-button:active {
         border-color: hsl(45, 100%, 72%);
       }
-  
+
       .save-button svg {
         height: 20px;
         width: 20px;
-        &:hover{
-            color: hsl(42, 23%, 89%);
-    
-            }
+
+        &:hover {
+          color: hsl(42, 23%, 89%);
+
+        }
       }
-  
+
       .save-button a {
         font-size: 12px;
         color: hsl(45, 81%, 11%);
         font-weight: bold;
         padding-right: 4px;
-        &:hover{
-        color: hsl(42, 23%, 89%);
+
+        &:hover {
+          color: hsl(42, 23%, 89%);
 
         }
       }
-       }
     }
-
-   
-}
-
-.modal-img {
-    max-width: 100%;
-height: auto;
   }
 
 
+}
+
+.modal-img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,79 +1,69 @@
 .btn-main-div {
-  .page-title {
-    color: $orange-yellow-crayola;
-  }
-  @include BoxStyle();
-  .btn-warpper {
-    @include BoxStyle();
-    @include BorderGradient();
-    border-bottom-left-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background: $onyx;
+  border: 1px solid $jet;
+  border-radius: 0 16px 0 16px;
+  overflow: hidden;
+  box-shadow: $shadow-1;
+
+  .btn-wrapper {
+    display: flex;
     list-style: none;
-    @include padding(10px, 20px);
+    padding: 10px 25px;
+    gap: 10px;
 
     .activeLinks {
-      text-decoration: none;
-      font-size: 0.8rem;
       color: $light-gray;
-    }
-    .active {
-      color: $orange-yellow-crayola;
+      @include Fonts(0.9rem, 500);
+      @include transition(color);
+      text-transform: capitalize;
+
+      &.active {
+        color: $orange-yellow-crayola;
+      }
+
+      &:hover {
+        color: $orange-yellow-crayola;
+      }
     }
 
     li {
-      text-decoration: none;
-      text-transform: capitalize;
-      padding: 0 15px;
-      @include Fonts(1rem, 400);
-      cursor: pointer;
-      text-decoration: none;
+      padding: 5px 10px;
     }
   }
-}
 
-@media screen and (max-width: 1068px) {
-  .btn-main-div {
-    .btn-warpper {
-      border-bottom-left-radius: 3px;
-      @include padding(4px, 10px);
+  @include mobile {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: hsla(240, 2%, 12%, 0.85);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.5);
+    padding-bottom: env(safe-area-inset-bottom);
 
-      li {
-        text-decoration: none;
-        padding: 0 13px;
-        @include Fonts(0.98rem, 400);
+    .btn-wrapper {
+      justify-content: space-between;
+      padding: 15px 20px;
+      gap: 5px;
+
+      .activeLinks {
+        @include Fonts(0.8rem, 500);
+        flex: 1;
+        text-align: center;
+
+        li {
+          padding: 8px 4px;
+        }
       }
-    }
-  }
-}
-
-
-
-
-@media screen and (max-width: 768px) {
-  .btn-main-div {
-   
-    .btn-warpper {
-      position:fixed !important;
-      bottom: 0;
-     
-      width: 85.8%;
-      border-bottom-left-radius: 3px;
-      @include padding(2px, 0px);
-      justify-content: space-around;
-      li {
-        text-decoration: none;
-        padding: 0 10px;
-        @include Fonts(0.98rem, 400);
-      }
-    }
-  }
-}
-@media screen and (max-width: 450px){
-  .btn-main-div {
-   width: 100%;
-    .btn-warpper {
-      position:fixed !important;
-      bottom: 0px;
-      width: 93.2%;
     }
   }
 }

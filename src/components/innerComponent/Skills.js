@@ -10,48 +10,37 @@ const Skills = () => {
         <div className="skill-div ">
           <div className="col-1">
             <h2>Frontend</h2>
-            <div>
-              <ul>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                  <li>React.js</li>
-                  <li>NEXT.js</li>
-
-
-                  <li>SASS/SCSS</li>
-                  <li>npm</li>
-
-                  <li>Redux</li>
-
-                  <li>Axios</li>
-                  <li>Figma</li>
-
-                  <li>Bootstrap</li>
-                  <li>Tailwind CSS</li>
-                </ul>
-              </ul>
-            </div>
+            <ul>
+              <li>React.js</li>
+              <li>Redux</li>
+              <li>Next.js</li>
+              <li>JavaScript</li>
+              <li>HTML & CSS</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </div>
 
           <div className="col-1">
-            <h2>Backend Technology</h2>
-            <div>
-              <ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MongoDB</li>
+            <h2>Backend</h2>
+            <ul>
+              <li>Node.js & Express.js</li>
+              <li>REST APIs</li>
+              <li>Socket.IO</li>
+              <li>Authentication & Auth (RBAC)</li>
+              <li>PostgreSQL & Sequelize ORM</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
 
-                <li>RESTful APIs</li>
-                <li>Postman</li>
-
-                <li>JWT</li>
-                <li>Socket.io</li>
-                <li>MySQL</li>
-              </ul>
-            </div>
+          <div className="col-1">
+            <h2>Tools & Platforms</h2>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Postman</li>
+              <li>Linux & Windows</li>
+              <li>Razorpay Integrated</li>
+              <li>PayPal Integrated</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,34 +1,31 @@
 .main {
-  @include width(85%, 20px, auto);
+  max-width: 1200px;
+  margin: 20px auto;
   color: white;
+  padding: 0 15px;
+
   .content-wrapper {
     display: flex;
-
-    gap: 30px;
-    @include padding(10px, 10px);
+    gap: 25px;
+    align-items: stretch;
   }
-}
 
-@media screen and (max-width: 1068px) {
-  .main {
-    @include width(98%, 20px, auto);
+  @include tablet {
+    max-width: 100%;
+    margin: 15px auto;
+
     .content-wrapper {
-      gap: 10px;
-      @include padding(5px, 5px);
+      gap: 15px;
     }
   }
-}
-@media screen and (max-width:768px){
-  .main {
-   
-    @include width(99%, 10px, auto);
-    color: white;
+
+  @include mobile {
+    margin: 10px auto;
+    padding: 0 10px 100px 10px; // Increased bottom padding for mobile nav
+
     .content-wrapper {
-      display: block;
-      gap: 10px;
-      @include padding(10px, 10px);
+      flex-direction: column;
+      gap: 20px;
     }
   }
-  
-
 }

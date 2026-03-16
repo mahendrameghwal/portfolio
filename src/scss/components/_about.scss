@@ -1,125 +1,120 @@
-
-  // background: #090101;
+// background: #090101;
 .ic {
-  padding: 30px 20px;
-
-  @include margin(70px, 0);
-  padding: 30px 60px;
-  word-break: normal;
+  padding: 0;
 
   .intro-peragraph {
-    padding: 0 20px;
     text-align: left;
+
     p {
-      line-height: 30px;
+      line-height: 1.8;
       color: $light-gray;
+      margin-bottom: 20px;
     }
+
     .page-title {
       color: $orange-yellow-crayola;
-      word-spacing: 2px;
-      letter-spacing: 1px;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
 
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 5px;
+        background: $orange-yellow-crayola;
+        border-radius: 3px;
+      }
     }
+
     .what-i-do {
-      @include margin(50px, 0);
-    }
-  }
-  .page-title {
-    color: $orange-yellow-crayola;
-  }
-  .row {
-    width: 100%;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    .col-1{
-      width: 50%;
-    }
-    .col-2{
-      width: 50%;
-    }
-   .roll-title{
-    font-size: 1.2rem;
-   }
-  }
-}
+      margin-top: 50px;
 
+      .experience-item {
+        @include BoxStyle();
+        padding: 25px;
+        margin-bottom: 30px;
+        @include flex-column(15px);
 
+        .exp-header {
+          @include flex-column(5px);
 
-@media screen and (max-width: 1068px) {
-  .ic {
-    @include margin(30px, 0);
-    padding: 15px 0px;
-   
-  
-    .intro-peragraph {
-      
-      p {
-        line-height: 26px;
-        font-size: 0.95em;
+          h3 {
+            color: $white-1;
+            @include Fonts(1.1rem, 600);
+          }
+
+          p {
+            color: $orange-yellow-crayola;
+            @include Fonts(0.85rem, 500);
+            margin: 0;
+          }
+        }
+
+        .exp-list {
+          list-style: none;
+          @include flex-column(10px);
+          padding-left: 5px;
+
+          li {
+            color: $light-gray;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+
+            &::before {
+              content: '▹';
+              position: absolute;
+              left: 0;
+              color: $orange-yellow-crayola;
+            }
+          }
+        }
       }
-     
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 25px;
+      }
+
+      .service-item {
+        @include BoxStyle();
+        padding: 25px;
+        @include flex-column(12px);
+
+        span {
+          color: $white-1;
+          @include Fonts(1.15rem, 600);
+        }
+
+        p {
+          margin: 0;
+          font-size: 0.95rem;
+          color: $light-gray;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    padding: 30px;
+  }
+
+  @include mobile {
+    padding: 20px;
+
+    .intro-peragraph {
       .what-i-do {
-        @include margin(30px, 0);
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
       }
-    }
-    .page-title {
-      color: $orange-yellow-crayola;
-    }
-    .row {
-      .col-1{
-        width: 60%;
-      }
-      .col-2{
-        width: 50%;
-      }
-     .roll-title{
-      font-size: 1rem;
-     }
     }
   }
-  
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  .ic {
- 
-    @include margin(15px, 0);
-
-   
-  
-    .intro-peragraph {
-      
-      p {
-        line-height: 25px;
-        font-size: 0.95em;
-      }
-    }
-    .page-title {
-      color: $orange-yellow-crayola;
-    }
-    .row {
-     
-      display: block;
-      .col-1{
-        width: 100%;
-        margin: 10px 0;
-      }
-      .col-2{
-        margin: 10px 0;
-
-        width: 100%;
-
-      }
-     .roll-title{
-      font-size: 1rem;
-     }
-    }
-  }
-  
 }

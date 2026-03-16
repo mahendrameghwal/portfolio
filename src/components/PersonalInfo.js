@@ -1,10 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { mahendra } from "../images/Images";
+import {
+  IoMailOutline,
+  IoPhonePortraitOutline,
+  IoLogoLinkedin,
+  IoLogoGithub,
+  IoLogoCodepen,
+  IoLocationOutline,
+  IoDownloadOutline
+} from "react-icons/io5";
+import resume from "../pdf/Mahendra 2026.pdf";
 
-const Personalnfo = () => {
+const PersonalInfo = () => {
   return (
     <div className="personal">
+      <div className="resume-btn-container">
+        <a href={resume} download="Mahendra_Kumar_Resume.pdf" className="resume-download-btn">
+          <span>Resume</span>
+          <IoDownloadOutline />
+        </a>
+      </div>
+
       <figure className="profile-img">
         <img className="avtar"
           alt="avtar"
@@ -20,7 +36,7 @@ const Personalnfo = () => {
       <div>
         <section className="social-div">
           <section className="social">
-            <ion-icon size="large" name="mail-outline"></ion-icon>
+            <div className="icon-box"><IoMailOutline size={22} /></div>
             <div>
               <p className="title">E-mail</p>
               <p className="social-links">solankirakesh895@gmail.com</p>
@@ -28,43 +44,45 @@ const Personalnfo = () => {
           </section>
 
           <section className="social">
-            <ion-icon size="large" name="phone-portrait-outline"></ion-icon>
+            <div className="icon-box"><IoPhonePortraitOutline size={22} /></div>
             <div>
               <p className="title">Phone</p>
               <p className="social-links">+91 8078659728</p>
             </div>
           </section>
           <section className="social">
-            <ion-icon size="large" name="logo-linkedin"></ion-icon>
+            <div className="icon-box"><IoLogoLinkedin size={22} /></div>
             <div>
               <p className="title">LinkedIn</p>
-             
-              <Link to="https://www.linkedin.com/in/mahendrameghwal/"> <p className="social-links">LinkedIn</p></Link>
+
+              <a href="https://www.linkedin.com/in/mahendrakumar99/" target="_blank" rel="noopener noreferrer">
+                <p className="social-links">LinkedIn Profile</p>
+              </a>
             </div>
           </section>
 
           <section className="social">
-            <ion-icon size="large" name="logo-github"></ion-icon>
+            <div className="icon-box"><IoLogoGithub size={22} /></div>
             <div>
               <p className="title">Github</p>
-              <Link to={"https://github.com/mahendrameghwal"}><p className="social-links">mahendrakumar</p></Link>
-              
+              <a href="https://github.com/mahendrameghwal" target="_blank" rel="noopener noreferrer"><p className="social-links">mahendrakumar</p></a>
+
             </div>
           </section>
 
           <section className="social">
-            <ion-icon size="large" name="logo-codepen"></ion-icon>
+            <div className="icon-box"><IoLogoCodepen size={22} /></div>
             <div>
               <p className="title">Codepen</p>
-              <Link to={"https://codepen.io/Mahii-"}>
-              <p className="social-links">mahendrakumar</p>
-              
-              </Link>
+              <a href="https://codepen.io/Mahii-" target="_blank" rel="noopener noreferrer">
+                <p className="social-links">mahendrakumar</p>
+
+              </a>
             </div>
           </section>
 
           <section className="social">
-            <ion-icon size="large" name="location-outline"></ion-icon>
+            <div className="icon-box"><IoLocationOutline size={22} /></div>
 
             <div>
               <p className="title">Location</p>
@@ -77,4 +95,4 @@ const Personalnfo = () => {
   );
 };
 
-export default Personalnfo;
+export default PersonalInfo;
