@@ -17,6 +17,7 @@ const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  
   const projects = [
     {
       name: "JobConnect",
