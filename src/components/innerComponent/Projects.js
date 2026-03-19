@@ -11,14 +11,13 @@ import {
 } from "../../images/Images";
 import { MdLiveTv } from "react-icons/md";
 import { IoCode } from "react-icons/io5";
-import { Fragment } from "react";
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
 
-  
+
   const projects = [
     {
       name: "JobConnect",
